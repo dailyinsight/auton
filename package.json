@@ -10,7 +10,7 @@
   },
   "main": "lib/auton",
   "engines": {
-    "node": ">=v0.4.7"
+    "node": ">=v0.10.0"
   },
   "dependencies": {
     "stylus":        ">=0.13.0",
