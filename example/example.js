@@ -17,10 +17,10 @@ var compiler = new Compiler('files/build', 'files/htdocs', true);
 
 compiler.copy( /\/vendor\// ); // anything in a subdir matching /vendor/ just gets copied manually.
 
-compiler.addRule( /\.js$/,     saveJs,  rules.js     ); // standard javascript    ruleset: (read, jshint, uglify-js, gzip)
-compiler.addRule( /\.coffee$/, saveJs,  rules.coffee ); // standard coffee-script ruleset: (read, coffee-script, uglify-js, gzip)
-compiler.addRule( /\.css$/,    saveCss, rules.css    ); // standard css           ruleset: (read, cssmin, gzip)
-compiler.addRule( /\.styl$/,   saveCss, rules.stylus ); // standard stylus        ruleset: (read, stylus, cssmin, gzip)
+compiler.addRule( /\.js$/,     saveJs,  rules.js     ); // standard javascript    ruleset: (read, jshint, uglify-js)
+compiler.addRule( /\.coffee$/, saveJs,  rules.coffee ); // standard coffee-script ruleset: (read, coffee-script, uglify-js)
+compiler.addRule( /\.css$/,    saveCss, rules.css    ); // standard css           ruleset: (read, cssmin)
+compiler.addRule( /\.styl$/,   saveCss, rules.stylus ); // standard stylus        ruleset: (read, stylus, cssmin)
 
 compiler.start();
 
